@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- PAGE METADATA -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flask Message Board</title>
+        <meta name="description" content="Flask Message Board">
+        <meta name="author" content="">		
+        <meta name="subject" content="Flask Message Board">
+        <link 
+            rel="stylesheet" 
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link 
+            rel="stylesheet" 
+            href='/static/styles.css' 
+        />
+    </head>
+    <body>
+        <header>
+            <h1>
+                <a href="/">FlaskMessageBoard</a>
+            </h1>
+            <div id="header-links">
+                <a href="/about">About</a>
+            </div>
+        </header>
+        <main>
+        <div id="main-content">
+            <!-- Form to send post to server -->
+            <form action="\" method="post" id="post-box"> <!-- Will send form to '\' endpoint -->
+                <input 
+                    placeholder=" Name" 
+                    name="name"
+                    class="post-input name-input"
+                    required>
+                <input
+                    placeholder=" Content"
+                    name="post"
+                    class="post-input content-input"
+                    required>
+                <input type="submit" value="submit" class="btn">
+            </form>
+
+            <!-- 
+                NOTE: in our DB schema, we have
+                    ID | Name | Content 
+            -->
+            {% for post in posts%}
+                <div class="post-item">
+                    <p class="user">{{post[1]}}</p> 
+                    <p class="post">{{post[2]}}</p>
+                    <p class="time">{{post[3]}}</p>
+                </div>
+            {% endfor %}
+
+            <!-- Clear Chat Logs -->
+            <form action="/clear" method="post">
+                <input type="submit" value="Clear Chat" class="btn">
+            </form>
+        
+        </div>
+        </main>
+        <footer>
+            <p id="copyright">&copy </p>
+            <a 
+                href="https://github.com/OpkarGhadu/Flask-Message-Board">
+                <i class="fa fa-github" style="font-size:24px"></i>
+            </a>
+        </footer>
+        <script src="../static/script.js"></script>
+    </body>
+</html>
