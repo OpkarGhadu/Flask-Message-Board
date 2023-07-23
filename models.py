@@ -35,7 +35,6 @@ def get_posts():
     return posts
 
 def delete_posts():
-    print("delete_posts()")
     con = sql.connect(path.join(ROOT, 'database.db'))
     cur = con.cursor()
     # Delete all posts
