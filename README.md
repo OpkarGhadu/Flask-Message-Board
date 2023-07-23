@@ -1,6 +1,7 @@
 # Flask-Message-Board
 This is a Flask based message board that allows users to enter their names and some content and upload a message to the board for everyone to see. The server will add a timestamp to the log. The messages are stored in a database and are maintained over different sessions. The database can be emptied by pressing the 'clear chat' button. All of the server logic is implemented through flask routes and endpoints. Flask-CORS is included to protect site resources.
 
+#### Preview
 <img src="https://github.com/OpkarGhadu/Flask-Message-Board/blob/main/assets/flaskMessageBoard.png" width="500">
 
 Watch a preview:
