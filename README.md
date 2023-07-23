@@ -10,7 +10,7 @@ https://github.com/OpkarGhadu/Flask-Message-Board/assets/6346551/7ea698b4-a552-4
 ## To Run :runner:
 1. Enter virtual environment - '$ source myenv/bin/activate'
 2. Start server - '$ python3 app.py'
-3. Browse to 'http://127.0.0.1:5000/' or wherever you started server
+3. Browse to 'http://127.0.0.1:5000/'
 
 ## Version :monkey:
 v1.0.0\
